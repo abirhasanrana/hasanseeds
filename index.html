@@ -1,120 +1,40 @@
-<!doctype html>
-<html lang="bn">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hasan Seeds | ভালো বীজ, সুন্দর বাগান — আপনার পছন্দের সবজি ও ফুলের বীজ এক জায়গায়।">
-  <title>Hasan Seeds | Hasan Seeds | ভালো বীজ, সুন্দর বাগান</title>
-  <style>
-    :root{--green:#176b45;--green2:#228653;--lime:#d8f3a7;--ink:#18352a;--muted:#61756a;--cream:#f7faf3;--white:#fff;--line:#e2ebdf}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
-    a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
-    header{background:#ffffffeb;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
-    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:850;color:var(--green)}.logo{width:40px;height:40px;border-radius:14px;background:var(--green);display:grid;place-items:center;color:#fff;font-size:23px}
-    nav{display:flex;gap:24px;color:#456153;font-weight:650;font-size:.95rem}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;background:var(--green);color:white;font-weight:750;border:0;cursor:pointer;transition:.2s}.nav-cta:hover,.btn:hover{background:#0d5233;transform:translateY(-2px)}
-    .hero{padding:70px 0 60px;background:radial-gradient(circle at 85% 20%,#e2f5c8 0,transparent 32%),linear-gradient(135deg,#f7faf3,#edf7e7)}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px}.eyebrow{display:inline-block;background:#e4f4d8;color:var(--green);padding:7px 13px;border-radius:999px;font-size:.85rem;font-weight:800}
-    h1{font-size:clamp(2.35rem,5vw,4.3rem);line-height:1.13;letter-spacing:-.04em;margin:18px 0}.hero p{color:var(--muted);font-size:1.08rem;max-width:560px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.btn.secondary{background:white;color:var(--green);border:1px solid #cfe2ca}.trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:26px;color:#536b5b;font-size:.9rem;font-weight:650}
-    .hero-art{min-height:390px;border-radius:34px;overflow:hidden;position:relative;background:linear-gradient(145deg,#b7d99b,#3d8b55);box-shadow:0 24px 60px #244b2726;display:grid;place-items:center}.hero-art img{width:100%;height:100%;min-height:390px;object-fit:cover;position:absolute;inset:0}.art-label{position:absolute;left:20px;bottom:20px;background:#ffffffeb;padding:15px 18px;border-radius:18px;box-shadow:0 8px 25px #173a201c}.art-label strong{display:block;color:var(--green)}.art-label span{font-size:.88rem;color:var(--muted)}
-    section{padding:66px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 32px}.section-head h2{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.2;margin:0 0 10px}.section-head p{color:var(--muted);margin:0}
-    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 28px #1c472008;transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:0 16px 35px #1c472014}.product-img{height:210px;background:#e8f2e1;overflow:hidden}.product-img img{width:100%;height:100%;object-fit:cover;display:block}.card-body{padding:19px}.tag{display:inline-block;font-size:.75rem;background:#edf7e7;color:var(--green);font-weight:800;border-radius:8px;padding:4px 8px}.card h3{margin:10px 0 4px;font-size:1.15rem}.card p{margin:0;color:var(--muted);font-size:.92rem;min-height:48px}.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:17px}.price{font-size:1.2rem;font-weight:850;color:var(--green)}.order-btn{border:0;border-radius:12px;background:var(--green);color:#fff;padding:10px 13px;font-weight:750;cursor:pointer}.order-btn:hover{background:#0d5233}
-    .benefits{background:#eaf4e4}.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.benefit{background:#ffffffc9;border:1px solid #dcebd4;border-radius:20px;padding:24px}.benefit .icon{font-size:1.8rem}.benefit h3{margin:10px 0 6px}.benefit p{margin:0;color:var(--muted);font-size:.95rem}
-    .banner{background:var(--green);color:#fff;border-radius:28px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:24px}.banner h2{margin:0 0 8px;font-size:clamp(1.7rem,3vw,2.4rem)}.banner p{margin:0;color:#d8ebdf}.banner .btn{background:var(--lime);color:#194b31;white-space:nowrap}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.contact-copy p{color:var(--muted)}.contact-box{background:white;border:1px solid var(--line);padding:24px;border-radius:22px}.contact-box label{display:block;font-weight:700;margin:12px 0 6px}.contact-box input,.contact-box textarea{width:100%;padding:12px;border:1px solid #d7e3d3;border-radius:12px;font:inherit;background:#fcfdfb}.contact-box textarea{min-height:90px;resize:vertical}.contact-box button{width:100%;margin-top:16px}
-    footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-    .notice{font-size:.85rem;color:#6d7e72;margin-top:12px}
-    @media(max-width:800px){nav{display:none}.hero{padding:42px 0}.hero-grid{grid-template-columns:1fr;gap:28px}.hero-art,.hero-art img{min-height:280px}.products{grid-template-columns:repeat(2,1fr)}.benefit-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.banner{padding:28px;align-items:flex-start;flex-direction:column}}
-    @media(max-width:520px){.products{grid-template-columns:1fr}.product-img{height:230px}.nav-cta{padding:10px 13px;font-size:.88rem}.hero-art,.hero-art img{min-height:240px}.trust{gap:10px}.banner .btn{width:100%}}
-  </style>
-</head>
-<body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#home"><span class="logo">🌱</span><span>Hasan Seeds</span></a>
-    <nav><a href="#home">হোম</a><a href="#products">পণ্য</a><a href="#why-us">কেন আমরা</a><a href="#contact">যোগাযোগ</a></nav>
-    <a class="nav-cta" href="#products">পণ্য দেখুন ↗</a>
-  </div>
-</header>
-<main>
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">🌿 Hasan Seeds — আপনার বাগানের সঙ্গী</span>
-        <h1>ভালো বীজে শুরু হোক <span style="color:var(--green)">সবুজের গল্প।</span></h1>
-        <p>বাড়ির ছাদ, বারান্দা কিংবা নিজের জমি—আপনার চাষের জন্য বেছে নিন পছন্দের সবজি ও ফুলের বীজ।</p>
-        <div class="hero-actions"><a class="btn" href="#products">পণ্য দেখুন</a><a class="btn secondary" href="#contact">অর্ডার সম্পর্কে জানুন</a></div>
-        <div class="trust"><span>✓ সহজ অর্ডার</span><span>✓ যত্নসহ প্যাকেজিং</span><span>✓ সহায়তা পাবেন</span></div>
-      </div>
-      <div class="hero-art">
-        <img src="https://images.unsplash.com/photo-1416879598556-6c7c4e9b9a9a?auto=format&fit=crop&w=1000&q=85" alt="সবুজ গাছ ও বাগান" onerror="this.style.display='none'">
-        <div class="art-label"><strong>আজই শুরু করুন</strong><span>আপনার ছোট্ট সবুজ বাগান 🌱</span></div>
-      </div>
-    </div>
-  </section>
-  <section id="products">
-    <div class="wrap">
-      <div class="section-head"><h2>জনপ্রিয় পণ্য</h2><p>আপনার পছন্দের বীজ বেছে নিন। নিচের পণ্য ও দাম নমুনা হিসেবে দেওয়া—নিজের পণ্য অনুযায়ী বদলে নেবেন।</p></div>
-      <div class="products">
-        <article class="card"><div class="product-img"><img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=800&q=80" alt="গাজর" loading="lazy"></div><div class="card-body"><span class="tag">সবজি বীজ</span><h3>গাজরের বীজ</h3><p>বাড়ির বাগান ও চাষের জন্য বীজ। প্যাকেটের পরিমাণ নিজের মতো ঠিক করুন।</p><div class="price-row"><span class="price">৳ ৮০</span><button class="order-btn" onclick="orderProduct('গাজরের বীজ','৮০')">অর্ডার করুন</button></div></div></article>
-        <article class="card"><div class="product-img"><img src="https://images.unsplash.com/photo-1563207153-f403bf289096?auto=format&fit=crop&w=800&q=80" alt="টমেটো" loading="lazy"></div><div class="card-body"><span class="tag">সবজি বীজ</span><h3>টমেটোর বীজ</h3><p>মৌসুমি বাগানের জন্য টমেটো বীজের নমুনা পণ্য।</p><div class="price-row"><span class="price">৳ ১০০</span><button class="order-btn" onclick="orderProduct('টমেটোর বীজ','১০০')">অর্ডার করুন</button></div></div></article>
-        <article class="card"><div class="product-img"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80" alt="ফুল" loading="lazy"></div><div class="card-body"><span class="tag">ফুলের বীজ</span><h3>মিশ্র ফুলের বীজ</h3><p>বাড়ি ও বারান্দায় রঙিন ফুলের বাগান সাজানোর জন্য।</p><div class="price-row"><span class="price">৳ ১২০</span><button class="order-btn" onclick="orderProduct('মিশ্র ফুলের বীজ','১২০')">অর্ডার করুন</button></div></div></article>
-      </div>
-      <p class="notice">দ্রষ্টব্য: পণ্যের নাম, ছবি, দাম, বীজের পরিমাণ ও বিবরণ বিক্রির আগে সঠিক তথ্য দিয়ে আপডেট করবেন।</p>
-    </div>
-  </section>
-  <section class="benefits" id="why-us"><div class="wrap"><div class="section-head"><h2>কেন আমাদের থেকে কিনবেন?</h2><p>বিশ্বাস তৈরি করুন সঠিক তথ্য, পরিষ্কার যোগাযোগ এবং ভালো গ্রাহকসেবার মাধ্যমে।</p></div><div class="benefit-grid">
-    <div class="benefit"><div class="icon">🌱</div><h3>পণ্যের পরিষ্কার তথ্য</h3><p>বীজের জাত, প্যাকেটের পরিমাণ, বপনের সময় ও নির্দেশনা উল্লেখ করুন।</p></div>
-    <div class="benefit"><div class="icon">📦</div><h3>যত্নসহ প্যাকেজিং</h3><p>প্যাকেট ঠিকভাবে সিল করে পণ্যের তথ্য ও মেয়াদ থাকলে তা স্পষ্টভাবে দেখান।</p></div>
-    <div class="benefit"><div class="icon">💬</div><h3>সহজ যোগাযোগ</h3><p>অর্ডার, ডেলিভারি ও পণ্য সম্পর্কে প্রশ্নের উত্তর দিতে যোগাযোগের ব্যবস্থা রাখুন।</p></div>
-  </div></div></section>
-  <section><div class="wrap"><div class="banner"><div><h2>আপনার বাগান শুরু করতে প্রস্তুত?</h2><p>পণ্য বেছে নিন, অর্ডার করুন—আমরা আপনার সঙ্গে যোগাযোগ করব।</p></div><a class="btn" href="#contact">অর্ডার করতে যোগাযোগ করুন →</a></div></div></section>
-  <section id="contact"><div class="wrap contact-grid">
-    <div class="contact-copy"><span class="eyebrow">যোগাযোগ ও অর্ডার</span><h2 style="font-size:2.2rem;line-height:1.2">আপনার অর্ডারের তথ্য দিন</h2><p>ফর্ম পূরণ করে অর্ডারের তথ্য প্রস্তুত করতে পারবেন, অথবা WhatsApp-এ অর্ডারের বার্তা পাঠাতে পারবেন। WhatsApp চালু করতে নিচের কোডে নিজের নম্বর বসাতে হবে।</p><p><strong>ফোন:</strong> আপনার ব্যবসার নম্বর এখানে দিন<br><strong>Facebook:</strong> আপনার পেজের লিংক এখানে দিন</p></div>
-    <form class="contact-box" id="orderForm"><label for="name">আপনার নাম</label><input id="name" required placeholder="নাম লিখুন"><label for="phone">মোবাইল নম্বর</label><input id="phone" required inputmode="tel" placeholder="01XXXXXXXXX"><label for="address">ডেলিভারি ঠিকানা</label><textarea id="address" required placeholder="গ্রাম/এলাকা, উপজেলা, জেলা"></textarea><label for="item">কোন পণ্যটি চান?</label><input id="item" required placeholder="যেমন: টমেটোর বীজ"><button class="btn" type="submit">WhatsApp-এ অর্ডার পাঠান</button><button class="order-btn" type="button" style="width:100%;margin-top:10px;background:#edf7e7;color:#176b45;padding:12px" onclick="downloadOrder()">ফর্মের অর্ডার তথ্য ডাউনলোড করুন</button><p class="notice">নোট: ফর্মের তথ্য এই ডেমোতে সার্ভারে জমা হয় না। WhatsApp বাটনে বার্তা তৈরি হবে; ডাউনলোড বাটনে অর্ডারের তথ্য আপনার ডিভাইসে টেক্সট ফাইল হিসেবে নামবে। স্থায়ীভাবে অর্ডার সংগ্রহ করতে পরে একটি ফর্ম/সার্ভিস যুক্ত করতে হবে।</p></form>
-  </div></section>
-</main>
-<footer><div class="wrap footer-row"><span>© <span id="year"></span> Hasan Seeds. সর্বস্বত্ব সংরক্ষিত।</span><span>Hasan Seeds — ভালো বীজে সবুজ ভবিষ্যৎ 🌿</span></div></footer>
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#14532d"><title>Hasan Seeds | বীজের দোকান</title>
+<style>
+:root{--g:#166534;--d:#14532d;--bg:#f5faf5;--line:#dce8dd;--muted:#607064}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:75px}body{margin:0;font-family:system-ui,"Noto Sans Bengali",sans-serif;background:var(--bg);color:#17231b;line-height:1.55}a{text-decoration:none;color:inherit}.wrap{width:min(1100px,92%);margin:auto}header{position:sticky;top:0;background:#ffffffed;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:5}.nav{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{font-weight:900;color:var(--d);font-size:1.1rem}.navlinks{display:flex;gap:17px;font-size:.9rem;font-weight:700}.btn{display:inline-flex;justify-content:center;align-items:center;padding:11px 14px;border:0;border-radius:12px;font:inherit;font-weight:800;cursor:pointer}.green{background:var(--g);color:white}.light{background:white;border:1px solid var(--line);color:var(--d)}.hero{padding:40px 0;background:radial-gradient(circle at 85% 10%,#bbf7d0,transparent 32%),linear-gradient(135deg,#f0fdf4,#fff 65%,#fefce8)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}.pill{display:inline-block;background:#dcfce7;color:var(--d);border-radius:30px;padding:6px 12px;font-weight:800;font-size:.85rem}h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.15;margin:16px 0}h1 span{color:var(--g)}.lead{color:#526256;font-size:1.05rem}.actions{display:flex;flex-wrap:wrap;gap:10px}.art{min-height:240px;border-radius:26px;background:linear-gradient(145deg,#14532d,#4d9b55);display:grid;place-items:center;color:white;font-size:7rem;position:relative}.art small{position:absolute;bottom:14px;font-size:.8rem;font-weight:800;letter-spacing:.1em}section{padding:42px 0}.head{text-align:center;margin:0 auto 23px;max-width:650px}.head h2{font-size:clamp(1.6rem,4vw,2.25rem);color:#173d24;margin:0 0 8px}.head p{color:var(--muted);margin:0}.tools{display:grid;grid-template-columns:1fr 220px;gap:12px;margin-bottom:14px}input,select,textarea{width:100%;padding:12px;border:1px solid #cbd9cd;border-radius:11px;font:inherit;background:white;color:#17231b;min-width:0}.cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.cat{border:1px solid var(--line);background:white;color:var(--d);border-radius:30px;padding:8px 13px;font-weight:750;cursor:pointer}.cat.active{background:var(--g);color:white}.count{color:var(--muted);font-size:.88rem;margin-bottom:12px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}.emoji{height:115px;display:grid;place-items:center;font-size:3.7rem;background:linear-gradient(135deg,#dcfce7,#f7fee7)}.red{background:linear-gradient(135deg,#fee2e2,#fff7ed)}.yellow{background:linear-gradient(135deg,#fef3c7,#f0fdf4)}.body{padding:14px;display:flex;flex-direction:column;flex:1}.tag{align-self:start;background:#edf8ee;color:var(--d);font-size:.75rem;padding:3px 8px;border-radius:20px;font-weight:750}.body h3{margin:7px 0 4px;font-size:1.08rem}.desc{color:var(--muted);font-size:.85rem;margin:0 0 10px}.label{font-size:.84rem;font-weight:750}.price{color:var(--g);font-weight:900;margin:8px 0}.add{display:flex;gap:7px;margin-top:4px}.qty{width:65px;padding:9px}.add .btn{flex:1;padding:9px 6px;font-size:.85rem}.empty{grid-column:1/-1;text-align:center;background:white;border:1px dashed var(--line);border-radius:16px;padding:25px;color:var(--muted)}.cartsec{background:#edf8ee}.cartlayout{display:grid;grid-template-columns:1fr .85fr;gap:17px;align-items:start}.panel,form{background:white;border:1px solid var(--line);border-radius:18px;padding:18px}.panel h3,form h3{margin:0 0 12px;color:var(--d)}.item{display:grid;grid-template-columns:1fr auto;gap:8px;padding:11px 0;border-bottom:1px solid #edf1ed}.item small{display:block;color:var(--muted)}.controls{display:flex;align-items:center;gap:5px}.controls button{background:white;border:1px solid var(--line);border-radius:7px;padding:3px 8px;cursor:pointer}.total{display:flex;justify-content:space-between;font-weight:900;border-top:1px solid var(--line);padding-top:12px;margin-top:10px}.cartempty,.note{color:var(--muted);font-size:.87rem}.field{display:block;font-weight:750;font-size:.9rem;margin-bottom:10px}.note{font-size:.79rem;margin-bottom:0}.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.benefit{background:white;border:1px solid var(--line);border-radius:16px;padding:17px}.benefit p{color:var(--muted);font-size:.9rem;margin-bottom:0}footer{background:#102c1a;color:#d9e9dc;text-align:center;padding:24px}footer p{margin:4px}.mobile{display:none}
+@media(max-width:740px){.nav{min-height:58px}.navlinks{display:none}.nav .btn{font-size:.82rem;padding:9px}.hero{padding:25px 0}.hero-grid{grid-template-columns:1fr;gap:18px}.art{min-height:160px;order:-1;font-size:5rem}.art small{font-size:.7rem}.tools{grid-template-columns:1fr}.grid{grid-template-columns:1fr;gap:12px}.card{display:grid;grid-template-columns:88px 1fr}.emoji{height:100%;min-height:160px;font-size:2.5rem}.body{padding:11px}.body h3{font-size:1rem}.desc{font-size:.82rem;margin-bottom:7px}.add .btn{font-size:.8rem}.cats{gap:6px}.cat{padding:7px 10px;font-size:.86rem}.cartlayout{grid-template-columns:1fr}.panel,form{padding:14px}.benefits{grid-template-columns:1fr}.benefit{padding:14px}.mobile{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:8;background:#ffffffed;padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:8px;border-top:1px solid var(--line)}.mobile .btn{flex:1;padding:10px 5px;font-size:.86rem}body{padding-bottom:68px}section{padding:34px 0}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="#home">🌱 Hasan Seeds</a><nav class="navlinks"><a href="#products">বীজ</a><a href="#cart">কার্ট</a><a href="#why">আমাদের সম্পর্কে</a></nav><a class="btn green" href="#products">বীজ দেখুন ↓</a></div></header>
+<main id="home"><section class="hero"><div class="wrap hero-grid"><div><span class="pill">🌿 চাষের শুরু হোক ভালো বীজে</span><h1>আপনার চাষের জন্য<br><span>পছন্দের বীজ</span></h1><p class="lead">লাউ, টমেটো, শাকসবজি ও ঘাসের বীজ খুঁজুন, প্যাকেট বেছে নিন এবং একাধিক পণ্য WhatsApp-এ অর্ডার করুন।</p><div class="actions"><a class="btn green" href="#products">🌱 বীজ দেখুন</a><a class="btn light" href="#cart">🛒 কার্ট / অর্ডার</a></div></div><div class="art">🌱<small>HASAN SEEDS · GROW WITH CARE</small></div></div></section>
+<section id="products"><div class="wrap"><div class="head"><h2>আমাদের বীজ</h2><p>নাম লিখে খুঁজুন, বিভাগ বেছে নিন এবং প্যাকেটের আকার অনুযায়ী দাম দেখুন।</p></div><div class="tools"><input id="search" type="search" placeholder="🔎 বীজের নাম লিখে খুঁজুন..."><select id="sort"><option value="default">সাধারণ ক্রম</option><option value="name">নাম অনুযায়ী</option><option value="low">দাম: কম থেকে বেশি</option><option value="high">দাম: বেশি থেকে কম</option></select></div><div class="cats" id="cats"><button class="cat active" data-cat="সব">সব বীজ</button><button class="cat" data-cat="সবজি">সবজি</button><button class="cat" data-cat="শাক">শাক</button><button class="cat" data-cat="ফল">ফল</button><button class="cat" data-cat="ঘাস">ঘাস</button></div><div class="count" id="count"></div><div class="grid" id="grid"></div></div></section>
+<section id="cart" class="cartsec"><div class="wrap"><div class="head"><h2>🛒 আপনার কার্ট</h2><p>একাধিক পণ্য যোগ করুন, তারপর সবগুলো একসঙ্গে WhatsApp-এ পাঠান।</p></div><div class="cartlayout"><div class="panel"><h3>নির্বাচিত পণ্য</h3><div id="items"><p class="cartempty">এখনো কোনো পণ্য যোগ করা হয়নি।</p></div><div class="total"><span>পণ্যের মোট</span><span id="total">৳০</span></div></div><form id="checkout"><h3>অর্ডারের তথ্য</h3><label class="field">আপনার নাম<input id="name" required placeholder="পুরো নাম"></label><label class="field">মোবাইল নম্বর<input id="phone" required inputmode="tel" placeholder="01XXXXXXXXX"></label><label class="field">সম্পূর্ণ ঠিকানা<textarea id="address" rows="3" required placeholder="গ্রাম/এলাকা, উপজেলা, জেলা"></textarea></label><label class="field">অতিরিক্ত নির্দেশনা (ঐচ্ছিক)<textarea id="note" rows="2" placeholder="অন্য তথ্য"></textarea></label><button class="btn green" type="submit">WhatsApp-এ অর্ডার পাঠান ↗</button><p class="note">WhatsApp খুললে অর্ডারের মেসেজটি দেখে Send চাপুন। ডেলিভারি খরচ পরে নিশ্চিত হবে।</p></form></div></div></section>
+<section id="why"><div class="wrap"><div class="head"><h2>কেন Hasan Seeds?</h2><p>সহজে পণ্য খুঁজুন, প্যাকেট নির্বাচন করুন এবং অর্ডার পাঠান।</p></div><div class="benefits"><div class="benefit">🔎 <b>সহজ সার্চ</b><p>বীজের নাম লিখে খুঁজুন।</p></div><div class="benefit">📦 <b>প্যাকেটের বিকল্প</b><p>প্রতিটি পণ্যে একাধিক প্যাকেট সাইজ ও নমুনা দাম।</p></div><div class="benefit">📱 <b>WhatsApp Checkout</b><p>একাধিক পণ্যের অর্ডার একসঙ্গে পাঠান।</p></div></div></div></section></main>
+<footer><strong>🌱 Hasan Seeds</strong><p>আপনার চাষের সঙ্গী</p><p>© <span id="year"></span> Hasan Seeds</p></footer><div class="mobile"><a class="btn green" href="#products">🌱 বীজ দেখুন</a><a class="btn light" href="#cart">🛒 কার্ট / অর্ডার</a></div>
 <script>
-  // সেটআপ: নিচের নম্বরটি নিজের WhatsApp নম্বর দিয়ে বদলান।
-  // বাংলাদেশের নম্বর হলে 880 দিয়ে শুরু করুন; +, স্পেস বা ড্যাশ দেবেন না।
-  const WHATSAPP_NUMBER = "8801XXXXXXXXX";
-  function orderProduct(name, price) {
-    document.getElementById("item").value = name + " — ৳" + price;
-    document.getElementById("contact").scrollIntoView({behavior:"smooth"});
-  }
-  document.getElementById("orderForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const address = document.getElementById("address").value.trim();
-    const item = document.getElementById("item").value.trim();
-    if (WHATSAPP_NUMBER.includes("X")) {
-      alert("প্রথমে HTML ফাইলের কোডে WHATSAPP_NUMBER-এর জায়গায় নিজের WhatsApp নম্বর বসান।");
-      return;
-    }
-    const message = `নতুন অর্ডার%0Aনাম: ${encodeURIComponent(name)}%0Aমোবাইল: ${encodeURIComponent(phone)}%0Aঠিকানা: ${encodeURIComponent(address)}%0Aপণ্য: ${encodeURIComponent(item)}`;
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
-  });
-  function downloadOrder() {
-    const fields = [
-      ["নাম", document.getElementById("name").value.trim()],
-      ["মোবাইল", document.getElementById("phone").value.trim()],
-      ["ঠিকানা", document.getElementById("address").value.trim()],
-      ["পণ্য", document.getElementById("item").value.trim()]
-    ];
-    if (fields.some(x => !x[1])) {
-      alert("ডাউনলোডের আগে নাম, মোবাইল, ঠিকানা ও পণ্যের ঘর পূরণ করুন।");
-      return;
-    }
-    const content = fields.map(x => x[0] + ": " + x[1]).join("\\n");
-    const blob = new Blob(["\\ufeff" + "Hasan Seeds — অর্ডারের তথ্য\\n" + content], {type:"text/plain;charset=utf-8"});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url; a.download = "hasan-seeds-order.txt"; a.click();
-    URL.revokeObjectURL(url);
-  }
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+/* নিজের ব্যবসার WhatsApp নম্বর দিন: 01712345678 হলে 8801712345678 লিখুন, + বা স্পেস নয় */
+const WHATSAPP_NUMBER="8801XXXXXXXXX";
+/* সব দাম নমুনা। প্রকাশের আগে নিজের আসল দাম দিয়ে বদলাবেন। */
+const products=[
+{id:1,n:"লাউয়ের বীজ",c:"সবজি",e:"🥒",d:"লাউ চাষের বীজ",v:[["১০ গ্রাম",30],["৫০ গ্রাম",100]]},
+{id:2,n:"টমেটোর বীজ",c:"সবজি",e:"🍅",t:"red",d:"টমেটো চাষের বীজ",v:[["১ গ্রাম",40],["৫ গ্রাম",150]]},
+{id:3,n:"ঘাসের বীজ",c:"ঘাস",e:"🌾",t:"yellow",d:"পশুখাদ্যের ঘাসের বীজ",v:[["১০০ গ্রাম",120],["৫০০ গ্রাম",500]]},
+{id:4,n:"মরিচের বীজ",c:"সবজি",e:"🌶️",t:"red",d:"মরিচ চাষের বীজ",v:[["১ গ্রাম",35],["৫ গ্রাম",130]]},
+{id:5,n:"বেগুনের বীজ",c:"সবজি",e:"🍆",t:"",d:"বেগুন চাষের বীজ",v:[["২ গ্রাম",30],["১০ গ্রাম",100]]},
+{id:6,n:"ঢেঁড়সের বীজ",c:"সবজি",e:"🌿",d:"ঢেঁড়স চাষের বীজ",v:[["১০ গ্রাম",30],["৫০ গ্রাম",110]]},
+{id:7,n:"শসার বীজ",c:"সবজি",e:"🥒",d:"শসা চাষের বীজ",v:[["৫ গ্রাম",35],["২৫ গ্রাম",120]]},
+{id:8,n:"করলার বীজ",c:"সবজি",e:"🥬",d:"করলা চাষের বীজ",v:[["৫ গ্রাম",40],["২৫ গ্রাম",140]]},
+{id:9,n:"তরমুজের বীজ",c:"ফল",e:"🍉",t:"red",d:"তরমুজ চাষের বীজ",v:[["৫ গ্রাম",50],["২৫ গ্রাম",180]]},
+{id:10,n:"পেঁপের বীজ",c:"ফল",e:"🥭",t:"yellow",d:"পেঁপে চাষের বীজ",v:[["৫ গ্রাম",45],["২৫ গ্রাম",160]]},
+{id:11,n:"লালশাকের বীজ",c:"শাক",e:"🥬",t:"red",d:"লালশাক চাষের বীজ",v:[["১০ গ্রাম",25],["৫০ গ্রাম",80]]},
+{id:12,n:"পালংশাকের বীজ",c:"শাক",e:"🥗",d:"পালংশাক চাষের বীজ",v:[["১০ গ্রাম",30],["৫০ গ্রাম",90]]}
+];
+let category="সব";const cart={};const money=n=>"৳"+Number(n).toLocaleString("bn-BD");
+function render(){let q=document.getElementById("search").value.trim().toLowerCase(),a=products.filter(p=>(category==="সব"||p.c===category)&&(p.n.toLowerCase().includes(q)||p.c.toLowerCase().includes(q)));let s=document.getElementById("sort").value;if(s==="name")a.sort((x,y)=>x.n.localeCompare(y.n,"bn"));if(s==="low")a.sort((x,y)=>x.v[0][1]-y.v[0][1]);if(s==="high")a.sort((x,y)=>y.v[0][1]-x.v[0][1]);document.getElementById("count").textContent=a.length+"টি পণ্য";document.getElementById("grid").innerHTML=a.length?a.map(p=>`<article class="card"><div class="emoji ${p.t||""}">${p.e}</div><div class="body"><span class="tag">${p.c} বিভাগ</span><h3>${p.n}</h3><p class="desc">${p.d}</p><label class="label">প্যাকেটের আকার</label><select id="v${p.id}" onchange="price(${p.id})">${p.v.map((v,i)=>`<option value="${i}">${v[0]} — ${money(v[1])}</option>`).join("")}</select><div class="price" id="p${p.id}">${money(p.v[0][1])}</div><div class="add"><input class="qty" id="q${p.id}" type="number" min="1" max="999" value="1" aria-label="পরিমাণ"><button class="btn green" onclick="add(${p.id})">＋ কার্টে যোগ</button></div></div></article>`).join(""):'<div class="empty">এই নামে কোনো বীজ পাওয়া যায়নি। অন্য নাম লিখে দেখুন।';}
+function price(id){let p=products.find(x=>x.id===id);document.getElementById("p"+id).textContent=money(p.v[+document.getElementById("v"+id).value][1])}
+function add(id){let p=products.find(x=>x.id===id),vi=+document.getElementById("v"+id).value,q=Math.max(1,Math.min(999,+document.getElementById("q"+id).value||1)),v=p.v[vi],k=id+"-"+vi;if(cart[k])cart[k].q+=q;else cart[k]={k,n:p.n,w:v[0],p:v[1],q};renderCart();document.getElementById("cart").scrollIntoView({behavior:"smooth"})}
+function change(k,d){if(!cart[k])return;cart[k].q+=d;if(cart[k].q<=0)delete cart[k];renderCart()}
+function removeItem(k){delete cart[k];renderCart()}
+function renderCart(){let a=Object.values(cart);document.getElementById("items").innerHTML=a.length?a.map(i=>`<div class="item"><div><b>${i.n}</b><small>${i.w} · ${money(i.p)} × ${i.q} = ${money(i.p*i.q)}</small></div><div class="controls"><button type="button" onclick="change('${i.k}',-1)">−</button><b>${i.q}</b><button type="button" onclick="change('${i.k}',1)">＋</button><button type="button" onclick="removeItem('${i.k}')" style="color:#b91c1c">×</button></div></div>`).join(""):'<p class="cartempty">এখনো কোনো পণ্য যোগ করা হয়নি। বীজের পাশে “কার্টে যোগ” চাপুন।</p>';document.getElementById("total").textContent=money(a.reduce((s,i)=>s+i.p*i.q,0))}
+document.getElementById("search").addEventListener("input",render);document.getElementById("sort").addEventListener("change",render);document.querySelectorAll(".cat").forEach(b=>b.addEventListener("click",()=>{category=b.dataset.cat;document.querySelectorAll(".cat").forEach(x=>x.classList.toggle("active",x===b));render()}));
+document.getElementById("checkout").addEventListener("submit",e=>{e.preventDefault();let a=Object.values(cart);if(!a.length){alert("আগে অন্তত একটি পণ্য কার্টে যোগ করুন।");return}if(WHATSAPP_NUMBER.includes("X")){alert("WhatsApp চালু করতে কোডের WHATSAPP_NUMBER-এ আপনার ব্যবসার নম্বর বসাতে হবে।");return}let total=a.reduce((s,i)=>s+i.p*i.q,0),lines=a.map(i=>`• ${i.n} (${i.w}) × ${i.q} = ৳${i.p*i.q}`).join("\n"),msg=`Hasan Seeds - অর্ডার\nনাম: ${document.getElementById("name").value}\nমোবাইল: ${document.getElementById("phone").value}\nঠিকানা: ${document.getElementById("address").value}\n\nপণ্য:\n${lines}\n\nপণ্যের মোট: ৳${total}\nডেলিভারি খরচ: পরে নিশ্চিত হবে\nঅতিরিক্ত নির্দেশনা: ${document.getElementById("note").value||"নেই"}`;window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank")});
+document.getElementById("year").textContent=new Date().getFullYear();render();renderCart();
+</script></body></html>
